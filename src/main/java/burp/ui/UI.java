@@ -53,7 +53,6 @@ public class UI {
         httpResponseEditor = respEdit;
         tableJPanel = new JPanel();
         tableJPanel.setLayout(new GridLayout(1,2));
-        createConfigUI();
         JScrollPane jScrollPane = new JScrollPane(createTable());
         tableJPanel.add(jScrollPane);
         JPanel reqRespEdit = new JPanel();
@@ -78,11 +77,11 @@ public class UI {
 //        Main.api.logging().logToOutput(listsModule.toString());
     }
 
-    public static void createConfigUI(){
-        JPanel jPanel = new JPanel(new BorderLayout());
-        jPanel.add(new ConfigUI(),BorderLayout.CENTER);
-        tableJPanel.add(jPanel);
-    }
+//    public static void createConfigUI(){
+//        JPanel jPanel = new JPanel(new BorderLayout());
+//        jPanel.add(new ConfigUI(),BorderLayout.CENTER);
+//        tableJPanel.add(jPanel);
+//    }
 
     public static void updateUIData(ListsModule listsModule,String key){
         setModeData(listsModule,key);

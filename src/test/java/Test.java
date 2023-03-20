@@ -15,7 +15,16 @@ import java.util.Map;
 public class Test {
 
     public static void main(String[] args) {
-        Map owner = RequestHandler.parse("https://test154451321.obs.cn-south-1.myhuaweicloud.com/1.txt?acl", "Owner");
-        System.out.println(owner.get("ID"));
+        String ak = "ACCESSKEYID:sdhaiohklnvnlkaujklqwlqksdaaaaaaaaaaaaaaaaaaaaaaaagdsggggggggggggggggggoiyhjkfsba,mcklajsd;lsajdl;sakl.cm.,xnz.jdl;abndflksbfvkldnsk.,mxzm.ajdklabkjdba.ko;wfbn,mvsaaaaaaaaaaaaaaaaaaaaaaaaaaafsdgggggggggg";
+        int accesskeyid = ak.indexOf("ACCESSKEYID");
+        String res = null;
+        if ((accesskeyid + 50) >= ak.length()){
+            res = ak.substring(accesskeyid);
+        }
+        else {
+            res = ak.substring(accesskeyid,50);
+        }
+        System.out.println(res);
+
     }
 }
